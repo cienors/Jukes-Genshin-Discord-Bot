@@ -82,26 +82,33 @@ async def on_ready():
 	await client.change_presence(activity=discord.Game('Genshin Impact'))
 	print('We\'re online!')
 
-def add(n: float, n2: float):
-	return n + n2
+def add(numbers):
+	return sum(numbers)
+
 def sub(n: float, n2: float):
 	return n - n2
+
 def rando(n: int, n2: int):
 	return random.randint(n, n2)
+
 def div(n: float, n2: float):
 	return n / n2
+
 def sqrt(n: float):
 	return math.sqrt(n)
+  
 def mult(n: float, n2: float):
 	return n * n2
+
 @client.command(aliases=['Add', 'addition', 'Addition', '+'])
-async def mathadd(ctx, x: float, y: float):
+async def mathadd(ctx, *numbers: float):
 	try:
-		result = add(x, y)
+		result = add(numbers)
 		await ctx.send(result)
 
 	except:
 		pass
+
 @client.command(aliases=['Sub', 'subtract', 'Subtract', '-'])
 async def mathsub(ctx, x: float, y: float):
 	try:
