@@ -59,7 +59,7 @@ async def ban(ctx, *arg):
 
 @client.command(pass_context=True)
 @commands.has_permissions(manage_messages = True)
-async def yeet(ctx, amount=99):
+async def shiit(ctx, amount=99):
 	channel = ctx.message.channel
 	messages = []
 	async for message in channel.history(limit = amount + 1):
