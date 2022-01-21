@@ -36,8 +36,8 @@ async def pro(ctx):
 	await ctx.send(f"pro")
 
 @client.command()
-async def hug(ctx):
-	await ctx.send(f"aww, come here :pleading_face:")
+async def hug(ctx, user: discord.Member = None):
+  await ctx.send(f"<@{ctx.author.id}> gives <@{user.id}> a hug :heart:")
 
 @client.command()
 async def owo(ctx):
