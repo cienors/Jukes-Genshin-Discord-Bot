@@ -36,8 +36,20 @@ async def pro(ctx):
 	await ctx.send(f"pro")
 
 @client.command()
+async def pasa(ctx, user: discord.Member = None):
+  await ctx.send(f":peach:")
+  
+@client.command()
 async def hug(ctx, user: discord.Member = None):
   await ctx.send(f"<@{ctx.author.id}> gives <@{user.id}> a hug :heart:")
+
+@client.command(aliases = ['hugMe', 'needhug', 'needHug', 'hugPlease', 'plzHug', 'plsHug', 'plzhug', 'plshug'])
+async def hugme(ctx):
+  await ctx.send(f"Aww, here's a hug <@{ctx.author.id}> :heart:")
+
+@client.command()
+async def kiss(ctx, user: discord.Member = None):
+  await ctx.send(f"<@{ctx.author.id}> gives <@{user.id}> a kiss uwu:heart:")
 
 @client.command()
 async def owo(ctx):
