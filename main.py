@@ -170,6 +170,20 @@ async def mathsqrt(ctx, x: float):
 
     except:
         pass
+@client.command(aliases=['Power', 'power', 'pow'])
+async def mathpow(ctx, x: int, y: int):
+    try:
+        result = math.pow(x,y)
+        await ctx.send(result)
+    except:
+        pass
+@client.command(aliases=['Power', 'power', 'pow'])
+async def mathpow(ctx, x: int, y: int):
+    try:
+        result = math.pow(x,y)
+        await ctx.send(result)
+    except:
+        pass
 
 
 ########################################################### Genshin Commands Below here ###########################################################
