@@ -173,15 +173,13 @@ async def mathsqrt(ctx, x: float):
 @client.command(aliases=['Power', 'power', 'pow'])
 async def mathpow(ctx, x: int, y: int):
     try:
-        result = math.pow(x,y)
-        await ctx.send(result)
+        await ctx.send(math.pow(x,y))
     except:
         pass
 @client.command(aliases=['Power', 'power', 'pow'])
 async def mathpow(ctx, x: int, y: int):
     try:
-        result = math.pow(x,y)
-        await ctx.send(result)
+        await ctx.send(math.pow(x,y))
     except:
         pass
 @client.command(aliases=['log10', 'Log10', 'logx'])
@@ -190,15 +188,13 @@ async def log10(ctx, x: float)
         if x < 0:
             return
         else:
-            result = math.log10(x)
-            await ctx.send(result)
+            await ctx.send(math.log10(x))
     except:
         pass
 @client.command(aliases=['exp', 'Exp', 'exponent', 'Exponent'])
 async def exp(ctx, x: float)
     try:
-        result = math.exp(x)
-        await ctx.send(result)
+        await ctx.send(math.exp(x))
     except:
         pass
 
