@@ -173,13 +173,13 @@ async def mathsqrt(ctx, x: float):
 @client.command(aliases=['Power', 'power', 'pow'])
 async def mathpow(ctx, x: int, y: int):
     try:
-        await ctx.send(math.pow(x,y))
+        await ctx.send(math.pow(x,y)) #doesn't create a result value and assign a value to it, directly puts value into ctx send 
     except:
         pass
 @client.command(aliases=['Power', 'power', 'pow'])
 async def mathpow(ctx, x: int, y: int):
     try:
-        await ctx.send(math.pow(x,y))
+        await ctx.send(math.pow(x,y)) #doesn't create a result value and assign a value to it, directly puts value into ctx send 
     except:
         pass
 @client.command(aliases=['log10', 'Log10', 'logx'])
@@ -188,13 +188,13 @@ async def log10(ctx, x: float)
         if x < 0:
             return
         else:
-            await ctx.send(math.log10(x))
+            await ctx.send(math.log10(x)) #doesn't create a result value and assign a value to it, directly puts value into ctx send 
     except:
         pass
 @client.command(aliases=['exp', 'Exp', 'exponent', 'Exponent'])
 async def exp(ctx, x: float)
     try:
-        await ctx.send(math.exp(x))
+        await ctx.send(math.exp(x)) #doesn't create a result value and assign a value to it, directly puts value into ctx send 
     except:
         pass
 
