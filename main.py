@@ -197,6 +197,17 @@ async def exp(ctx, x: float)
         await ctx.send(math.exp(x)) #doesn't create a result value and assign a value to it, directly puts value into ctx send 
     except:
         pass
+@client.command(aliases=['log'])
+async def log(ctx, x: int, y: int):
+    #With one argument, return the natural logarithm of x (to base e).
+
+    #With two arguments, return the logarithm of x to the given base, calculated as log(x)/log(base).
+    try:
+        result = math.log(x,y)
+        await ctx.send(result)
+    except:
+        pass
+    
 
 
 
